@@ -6,7 +6,6 @@ module.exports = {
   dev: {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
     host: 'localhost', // can be overwritten by process.env.HOST
     port: 8080, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
     autoOpenBrowser: false,
@@ -14,7 +13,17 @@ module.exports = {
     notifyOnErrors: true,
     poll: false,
     devtool: 'cheap-module-eval-source-map',
-    cssSourceMap: true
+    cssSourceMap: true,
+    proxyTable:{
+      '/api': {
+        target: 'http://localhost:8081',
+        changeOrigin: true,
+        ws:true,
+        pathRewrite:{
+          '^/api': ''
+        }
+      }
+    }
   },
 
   build: {
