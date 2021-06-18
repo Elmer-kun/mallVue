@@ -3,9 +3,11 @@ import Router from 'vue-router'
 import index from './view/index'
 import login from './view/login'
 import mallIndex from './view/mallIndex'
-import goods from './view/goods'
+import goods from './view/goods/goods'
 import orders from './view/orders'
 import user from './view/user'
+import goodsAdd from "./view/goods/goodsAdd";
+import goodsEdit from "./view/goods/goodsEdit";
 
 Vue.use(Router);
 
@@ -30,6 +32,16 @@ export default new Router({
         {
           path: 'goods',
           component: goods
+        },
+        {
+          path: '/addGoods',
+          name: 'addGoods',
+          component: goodsAdd
+        },
+        {
+          path: '/editGoods',
+          name: 'editGoods',
+          component: goodsEdit
         },
         {
           path: 'orders',
