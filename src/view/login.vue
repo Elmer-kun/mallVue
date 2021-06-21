@@ -39,7 +39,7 @@
                     if(response.data.errno === 0){
                         this.$router.push('mallIndex');
                     }else{
-                        this.message(response.data.errmsg);
+                        this.$message.error(response.data.errmsg);
                     }
                 });
             }
