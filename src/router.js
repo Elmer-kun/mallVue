@@ -34,17 +34,18 @@ export default new Router({
           component: goods
         },
         {
-          path: '/addGoods',
+          path: 'addGoods',
           name: 'addGoods',
           component: goodsAdd
         },
         {
-          path: '/editGoods',
+          path: 'editGoods',
           name: 'editGoods',
           component: goodsEdit
         },
         {
           path: 'orders',
+          name: 'orders',
           component: orders
         },
         {
